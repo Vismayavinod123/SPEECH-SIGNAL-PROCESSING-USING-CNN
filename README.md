@@ -45,3 +45,46 @@ Conclusion:
 
         Deep learning has invaded into all facets of life with incredible impacts. The capability to process unstructured data and to solve complex problems make it the technology of the present and future. This project analyzes the effect of using CNN for speech recognition and speaker identification. From the results it is obvious that CNN based speech enables systems can be more accurate, fast and does not require  feature extraction. The prediction results of the test data are not highly promising but can be further improved by adjusting the sampling rate and by training the model with female voice recordings.
 
+
+Model Summary:
+Layer (type)                 Output Shape              Param #   
+=================================================================
+conv2d_1 (Conv2D)            (None, 64, 64, 32)        896       
+_________________________________________________________________
+batch_normalization_1 (Batch (None, 64, 64, 32)        128       
+_________________________________________________________________
+conv2d_2 (Conv2D)            (None, 63, 63, 48)        6192      
+_________________________________________________________________
+batch_normalization_2 (Batch (None, 63, 63, 48)        192       
+_________________________________________________________________
+conv2d_3 (Conv2D)            (None, 62, 62, 120)       23160     
+_________________________________________________________________
+batch_normalization_3 (Batch (None, 62, 62, 120)       480       
+_________________________________________________________________
+max_pooling2d_1 (MaxPooling2 (None, 31, 31, 120)       0         
+_________________________________________________________________
+dropout_1 (Dropout)          (None, 31, 31, 120)       0         
+_________________________________________________________________
+flatten_1 (Flatten)          (None, 115320)            0         
+_________________________________________________________________
+dense_1 (Dense)              (None, 128)               14761088  
+_________________________________________________________________
+batch_normalization_4 (Batch (None, 128)               512       
+_________________________________________________________________
+dropout_2 (Dropout)          (None, 128)               0         
+_________________________________________________________________
+dense_2 (Dense)              (None, 64)                8256      
+_________________________________________________________________
+batch_normalization_5 (Batch (None, 64)                256       
+_________________________________________________________________
+dropout_3 (Dropout)          (None, 64)                0         
+_________________________________________________________________
+dense_3 (Dense)              (None, 10)                650       
+=================================================================
+Total params: 14,801,810
+Trainable params: 14,801,026
+Non-trainable params: 784
+
+![image](https://user-images.githubusercontent.com/62199904/156126258-3210d0d2-bd58-4af2-91ac-06485ea8c31f.png)
+
+
